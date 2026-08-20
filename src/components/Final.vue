@@ -1,14 +1,14 @@
 <template>
    <div class="final">
-     <div :class="`final-texto ${etapa}`">
-        <h3>{{texto}}</h3>
-
-        <button 
+    <button 
         type="button"
         @click="jogarNovamente"
         class="final-botao">
             Jogar novamente
         </button>
+
+     <div :class="`final-texto ${etapa}`">
+        <h3>{{texto}}</h3>
      </div>
    </div>
 </template>
@@ -39,5 +39,10 @@ export default {
 
 .final-texto.ganhador{
     color: green;
+}
+
+.final-botao {
+    margin: 2rem;
+    font-size: 1.2rem;
 }
 </style>

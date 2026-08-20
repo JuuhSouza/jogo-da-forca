@@ -52,12 +52,13 @@ export default {
 }
 
 .formulario-input{
-    padding: 10px 5px;
-    border: 0;
+    padding: 10px 15px;
+    border: 1px solid var(--border-form);
     border-radius: 5px;
     margin: 10px 0;
-    color: var(--color-form);
-    font-size: 1rem;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5rem;
     text-align: center;
 }
 </style>

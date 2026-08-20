@@ -21,7 +21,7 @@
         <Final
         v-if="etapa != 'jogo'"
         :etapa="etapa"
-        :texto="etapa === 'ganhador' ? 'Parabens :)' : 'Loseer'"
+        :texto="etapa === 'ganhador' ? 'Parabens você não é tao burro assim :)' : 'Tenta de novo pra ve se acerta burro!'"
         :jogarNovamente="jogarNovamente"
         />
    </div>
@@ -43,7 +43,7 @@ export default {
         etapa: String,
         letras: Array,
         jogar: Function,
-        jogarNovamente: Function
+        jogarNovamente: Function,
     },
     components: {
         Forca, Palavra, Teclado, Final

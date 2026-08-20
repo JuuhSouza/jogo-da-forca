@@ -24,7 +24,7 @@ export default {
     },
     data() {
         return {
-                alfabeto: "abcdefghijklmnopqrstuvwxyz".split("")
+                alfabeto: "abcçdefghijklmnopqrstuvwxyz".split("")
         }
     }
 }
@@ -42,5 +42,6 @@ export default {
 .teclado-botao{
     margin: 5px;
     text-transform: uppercase;
+    font-size: 1.3rem;
 }
 </style>

@@ -28,7 +28,7 @@ export default {
 
 <style>
 .palavra{
-    color: red;
+    color: var(--dica);
     text-transform: uppercase;
     font-size: 1.5rem;
     display: flex;
@@ -46,7 +46,7 @@ export default {
     height: 30px;
     width: 30px;
     margin: 0px 5px;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid var(--linha-palavra);
     display: flex;
     justify-content: center;
     align-items: center;

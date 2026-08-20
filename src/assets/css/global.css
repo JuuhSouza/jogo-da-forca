@@ -4,7 +4,10 @@
     --color-button: white;
     --color-form: #14022D;
     --color-title-input: #ffffff;
-
+    --color-title: #ffffff;
+    --border-form:#78249A;
+    --dica:#F4EDE7;
+    --linha-palavra:#F50674;
 }
 
 
@@ -18,9 +21,6 @@ html,
 body {
     background-color: var(--background-global);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 100%;
-    height: 100%;
-    margin: 5rem 0 0 0;
 }
 
 button {

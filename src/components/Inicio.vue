@@ -1,6 +1,8 @@
 <template>
-    <h1> Jogo da forca</h1>
-
+    <div class="titulo-inicio">
+        <h1> Jogo da forca</h1>
+    </div>
+   
     <section v-if="tela === 'inicio'" id="inicio">
         <formulario 
         v-if="etapa === 'palavra'"
@@ -107,7 +109,12 @@ export default {
 </script>
 
 <style>
-h1{
-    color: red;
+.titulo-inicio{
+    margin: 5rem;
+}
+.titulo-inicio h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--color-title-input);
 }
 </style>

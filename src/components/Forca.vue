@@ -24,6 +24,6 @@ export default {
 
 <style>
 .forca img{
-    height: 100px;
+    height:200px;
 }
 </style>
