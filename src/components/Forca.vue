@@ -1,6 +1,6 @@
 <template>
-   <div class="Forca">
-        <img src="https://raw.githubusercontent.com/william-costa/wdev-hangman-game-resources/master/images/hangman/0.svg" alt="">
+   <div class="forca">
+        <img :src="`https://raw.githubusercontent.com/william-costa/wdev-hangman-game-resources/master/images/hangman/${erros}.svg`" alt="">
    </div>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
     name: 'Forca',
     props: {
-        
+        erros: Number
     },
     data() {
         return {
@@ -23,5 +23,7 @@ export default {
 </script>
 
 <style>
-
+.forca img{
+    height: 100px;
+}
 </style>
