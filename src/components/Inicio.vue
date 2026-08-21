@@ -122,7 +122,7 @@ export default {
 
 <style>
 .titulo-inicio{
-    margin: 5rem;
+    margin: 5rem 0;
 }
 .titulo-inicio h1{
     font-size: 3rem;
