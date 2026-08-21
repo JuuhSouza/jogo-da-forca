@@ -67,12 +67,15 @@ export default {
             this.tela = 'jogo';
         },
         verificarLetra: function (letra) {
-            return this.letras.find(item => item.toLowerCase() === letra.toLowerCase());
+            const letraNormalizada = letra.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+            return this.letras.find(item =>
+                item.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() === letraNormalizada
+            );
         },
         jogar: function (letra) {
             /* Adiciona letra jogada */
             this.letras.push(letra);
-
             /* validar erro */
             this.verificarErros(letra);
         },
@@ -90,9 +93,18 @@ export default {
                 this.etapa = 'enforcado'
             }
         },
-        verificarAcertos: function () {
-            let letrasUnicas = [...new Set(this.palavra.split(''))] /* criar array com letras separadas da palavra */
-            if (letrasUnicas.length === (this.letras.length - this.erros)) {
+        verificarAcertos() {
+            const letrasUnicas = [
+                ...new Set(
+                    this.palavra.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s/g, "").toLowerCase().split('')
+                )
+            ];
+            const ganhou = letrasUnicas.every(letra =>
+                this.letras.some(jogada =>
+                    jogada.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() === letra
+                )
+            );
+            if (ganhou) {
                 this.etapa = 'ganhador';
             }
         },

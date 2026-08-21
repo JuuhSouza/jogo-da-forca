@@ -1,10 +1,13 @@
 <template>
    <div class="palavra">
         <div class="palavra-letras">
-            <div 
-            class="palavra-letra" 
-            v-for="(letra, key) in palavra" :key="key"
-            > {{ (verificarLetra(letra) || etapa==='enforcado') ? letra : '' }}</div>
+           <div
+                :class="letra === ' ' ? 'palavra-separador' : 'palavra-letra'"
+                v-for="(letra, key) in palavra"
+                :key="key"
+            >
+                {{ letra === ' '? '-': (verificarLetra(letra) || etapa === 'enforcado') ? letra : '' }}
+            </div>
         </div>
 
         <div class="palavra-dica">
@@ -50,5 +53,13 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.palavra-separador{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
 }
 </style>
