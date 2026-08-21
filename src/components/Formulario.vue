@@ -7,7 +7,10 @@
         <input 
         type="text" 
         class="formulario-input"
-        v-model="inputValue">
+        v-model="inputValue"
+        id=""
+        @keyup.enter="onSubmit"
+        >
 
         <button 
         type="button" 
